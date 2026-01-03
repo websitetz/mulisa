@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULISA CONSTRUCTION & DESIGNS | Kampuni ya Ujenzi Dar es Salaam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset & Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* WhatsApp Icon */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Header */
+        .main-header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .company-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .company-name span {
+            color: #cc6600;
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        .main-nav ul li {
+            margin-left: 25px;
+        }
+        
+        .main-nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .main-nav ul li a:hover {
+            color: #cc6600;
+        }
+        
+        .contact-header {
+            display: flex;
+            align-items: center;
+        }
+        
+        .phone-number {
+            background-color: #cc6600;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .phone-number i {
+            margin-right: 8px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('slide.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-top: 90px;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: #cc6600;
+            color: white;
+            border: 2px solid #cc6600;
+        }
+        
+        .btn-primary:hover {
+            background-color: #b35900;
+            border-color: #b35900;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: #333;
+        }
+        
+        .btn i {
+            margin-left: 8px;
+        }
+        
+        /* About Section */
+        .about-section {
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background-color: #cc6600;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ffebcc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cc6600;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .feature-text h4 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .about-image img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Services Section */
+        .services-section {
+            background-color: #f8f8f8;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .service-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .service-link {
+            color: #cc6600;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-link i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .service-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Video Section */
+        .video-section {
+            background-color: white;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .video-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 300px;
+        }
+        
+        .video-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Projects Section */
+        .projects-section {
+            background-color: #f8f8f8;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .project-item {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 250px;
+        }
+        
+        .project-image {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .project-item:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        /* Office Info Section */
+        .office-section {
+            background-color: white;
+        }
+        
+        .office-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .office-info h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .office-info p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .office-features {
+            margin-top: 25px;
+        }
+        
+        .office-feature {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        .office-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ffebcc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cc6600;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .office-image img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: #f8f8f8;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .contact-info p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #ffebcc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cc6600;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #cc6600;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        .main-footer {
+            background-color: #222;
+            color: #ddd;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: #cc6600;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: #cc6600;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .developer {
+            color: #cc6600;
+            font-weight: 600;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .video-grid, .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .about-content, .office-container, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .main-nav {
+                position: fixed;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+            }
+            
+            .main-nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .main-nav ul {
+                flex-direction: column;
+            }
+            
+            .main-nav ul li {
+                margin: 0 0 15px 0;
+            }
+            
+            .contact-header .phone-number {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .video-grid, .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .hero-content h1 {
+                font-size: 28px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/255754616660?text=Natumaini%20uko%20sawa.%20Ninavutiwa%20na%20huduma%20za%20Mulisa%20Construction" 
+       class="whatsapp-float" 
+       target="_blank"
+       title="Wasiliana nasi kwa WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <div class="logo">
+                    <img src="logo.png" alt="Mulisa Construction Logo">
+                </div>
+                <div class="company-name">MULISA CONSTRUCTION<br><span>Ujenzi & Miundo</span></div>
+            </div>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#home">Nyumbani</a></li>
+                    <li><a href="#about">Kuhusu Sisi</a></li>
+                    <li><a href="#services">Huduma Zetu</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#projects">Miradi Yetu</a></li>
+                    <li><a href="#office">Ofisi Yetu</a></li>
+                    <li><a href="#contact">Wasiliana</a></li>
+                </ul>
+            </nav>
+            
+            <div class="contact-header">
+                <a href="tel:+255786463020" class="phone-number">
+                    <i class="fas fa-phone"></i> +255 786 463 020
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Tanzania's Premier Construction Company</h1>
+                <p>We construct to make the everyday extraordinary. We are the choice for clientele seeking to build elite spaces. We take a holistic view of construction.</p>
+                <div class="hero-buttons">
+                    <a href="TumaOmbilaHuduma.html" class="btn btn-primary">Tuma Ombi la Huduma <i class="fas fa-paper-plane"></i></a>
+                    <a href="#projects" class="btn btn-secondary">Tazama Miradi Yetu <i class="fas fa-eye"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section-padding" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kuhusu Kampuni Yetu</h2>
+                <p>Mulisa Construction ni kampuni ya ujenzi na miundo iliyosajiliwa na inayoongoza kwa ubora wa kazi</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Kampuni ya Ujenzi Inayoaminika Tanzania</h3>
+                    <p>Mulisa Construction imekuwa ikifanya kazi katika sekta ya ujenzi tangu mwaka 2015. Tuna uzoefu wa kutosha katika ujenzi wa nyumba, ofisi, biashara na miradi mbalimbali.</p>
+                    <p>Kampuni yetu iko Chanika, Dar es Salaam na tumeifanya kazi katika maeneo mbalimbali kama vile Kigamboni, Mbagala, Tabata, na maeneo mengine ya jijini.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Ubora wa Kazi</h4>
+                                <p>Tunatumia vifaa bora na wenye ujuzi wa hali ya juu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Ukaribu na Mteja</h4>
+                                <p>Tunakamilisha miradi kwa wakati na kwa bajeti</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Timu ya Wataalamu</h4>
+                                <p>Tuna wataalamu wenye ujuzi wa miaka mingi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="slide2.jpg" alt="Mulisa Construction Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section section-padding" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Huduma Zetu</h2>
+                <p>Tunatoa huduma mbalimbali za ujenzi na ukarabati wa majengo</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="work1.jpg" alt="Ujenzi wa Nyumba">
+                    </div>
+                    <div class="service-content">
+                        <h3>Ujenzi wa Nyumba</h3>
+                        <p>Ujenzi kamili wa nyumba kuanzia msingi hadi kukaa. Tunaweza kujenga nyumba ya mtindo wowote uliotaka.</p>
+                        <a href="TumaOmbilaHuduma.html" class="service-link">Omba Huduma <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="work2.jpg" alt="Ukarabati wa Nyumba">
+                    </div>
+                    <div class="service-content">
+                        <h3>Ukarabati wa Nyumba</h3>
+                        <p>Ukarabati wa nyumba zilizokuwa, uboreshaji wa majengo, kubadilisha muonekano wa ndani na nje ya nyumba.</p>
+                        <a href="TumaOmbilaHuduma.html" class="service-link">Omba Huduma <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="work3.jpg" alt="Miundo ya Gypsum">
+                    </div>
+                    <div class="service-content">
+                        <h3>Miundo ya Gypsum</h3>
+                        <p>Utengenezaji wa dari za gypsum, miundo ya kuta, na muundo mbalimbali wa mapambo ya ndani kwa kutumia gypsum.</p>
+                        <a href="TumaOmbilaHuduma.html" class="service-link">Omba Huduma <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="work4.jpg" alt="Mipango ya Umeme">
+                    </div>
+                    <div class="service-content">
+                        <h3>Mipango ya Umeme</h3>
+                        <p>Ufungaji wa mipango ya umeme katika majengo mapya na ukarabati wa mipango ya umeme iliyopo.</p>
+                        <a href="TumaOmbilaHuduma.html" class="service-link">Omba Huduma <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section section-padding" id="video">
+        <div class="container">
+            <div class="section-title">
+                <h2>Video za Miradi Yetu</h2>
+                <p>Tazama video za miradi tunayofanya na kazi zetu zinavyofanyika</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <video autoplay muted loop playsinline>
+                        <source src="1.mp4" type="video/mp4">
+                        Browser yako haitumii video.
+                    </video>
+                </div>
+                
+                <div class="video-item">
+                    <video autoplay muted loop playsinline>
+                        <source src="2.mp4" type="video/mp4">
+                        Browser yako haitumii video.
+                    </video>
+                </div>
+                
+                <div class="video-item">
+                    <video autoplay muted loop playsinline>
+                        <source src="3.mp4" type="video/mp4">
+                        Browser yako haitumii video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section section-padding" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Miradi Tuliyofanya</h2>
+                <p>Tazama baadhi ya miradi tuliyoifanya katika maeneo mbalimbali</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="work1.jpg" alt="Miradi ya Ujenzi">
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="work2.jpg" alt="Miradi ya Ujenzi">
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="work3.jpg" alt="Miradi ya Ujenzi">
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="work4.jpg" alt="Miradi ya Ujenzi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Section -->
+    <section class="office-section section-padding" id="office">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ofisi Yetu</h2>
+                <p>Jumba letu la kazi linalojitosheleza kwa upana na uzuri</p>
+            </div>
+            
+            <div class="office-container">
+                <div class="office-info">
+                    <h3>Ofisi ya Mulisa Construction</h3>
+                    <p>Ofisi yetu iko Chanika, Dar es Salaam, katika jumba la kisasa linalojitosheleza kwa upana na uzuri. Jumba hili lina maeneo makubwa ya kazi, ukumbi wa mikutano, na sehemu ya kukutania na wateja.</p>
+                    
+                    <p>Ofisi yetu imepangwa vizuri na ina mazingira mazuri ya kufanya kazi. Kila sehemu imedhamiriwa kwa ajili ya aina fulani ya kazi, kutoka ofisi za usimamizi hadi sekta ya usanifu na upangaji wa miradi.</p>
+                    
+                    <div class="office-features">
+                        <div class="office-feature">
+                            <div class="office-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div>
+                                <h4>Jumba la Kisasa</h4>
+                                <p>Jumba la ghorofa mbili lenye muundo wa kisasa</p>
+                            </div>
+                        </div>
+                        
+                        <div class="office-feature">
+                            <div class="office-icon">
+                                <i class="fas fa-expand-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Upana wa Kutosha</h4>
+                                <p>Maeneo makubwa ya kazi na ukumbi wa mikutano</p>
+                            </div>
+                        </div>
+                        
+                        <div class="office-feature">
+                            <div class="office-icon">
+                                <i class="fas fa-parking"></i>
+                            </div>
+                            <div>
+                                <h4>Maegesho ya Bure</h4>
+                                <p>Maegesho makubwa ya magari kwa wateja na wafanyakazi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="office-image">
+                    <img src="slide3.jpg" alt="Ofisi ya Mulisa Construction">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Wasiliana Nasi</h2>
+                <p>Tupigie simu au tuma ujumbe ili tuweze kukusaidia na mradi wako</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Muongozo wa Kuwasiliana</h3>
+                    <p>Tunaweza kukupa mchanganuo wa gharama (quotation) bila malipo. Wasiliana nasi kwa maelezo zaidi.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Ofisi Yetu</h4>
+                                <p>Chanika, Dar es Salaam<br>Tanzania</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Namba za Simu</h4>
+                                <p>+255 786 463 020<br>+255 754 616 660</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Barua Pepe</h4>
+                                <p>mulisa.construction@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Saa za Kazi</h4>
+                                <p>Jumatatu - Ijumaa: 8:00 asubuhi - 5:00 jioni<br>Jumamosi: 8:00 asubuhi - 1:00 mchana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Tuma Ujumbe Kupitia WhatsApp</h3>
+                    <form id="whatsappForm">
+                        <div class="form-group">
+                            <label for="name">Jina Lako *</label>
+                            <input type="text" id="name" class="form-control" placeholder="Ingiza jina lako" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Namba ya Simu *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="07XXXXXXXX" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Aina ya Hudwa *</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">-- Chagua Huduma --</option>
+                                <option value="Ujenzi wa Nyumba">Ujenzi wa Nyumba</option>
+                                <option value="Ukarabati wa Nyumba">Ukarabati wa Nyumba</option>
+                                <option value="Miundo ya Gypsum">Miundo ya Gypsum</option>
+                                <option value="Mipango ya Umeme">Mipango ya Umeme</option>
+                                <option value="Huduma Nyingine">Huduma Nyingine</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Mahali pa Mradi *</label>
+                            <input type="text" id="location" class="form-control" placeholder="Mfano: Chanika, Kigamboni" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Ujumbe Wako *</label>
+                            <textarea id="message" class="form-control" placeholder="Andika ujumbe wako hapa..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fab fa-whatsapp"></i> Tuma Kupitia WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>MULISA CONSTRUCTION</h3>
+                    <p>Kampuni ya ujenzi na miundo inayoongoza kwa ubora wa kazi na uaminifu katika miradi ya ujenzi.</p>
+                    <p>Tumejisajili na kufanya kazi tangu mwaka 2015.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Viungo</h3>
+                    <ul>
+                        <li><a href="#home">Nyumbani</a></li>
+                        <li><a href="#about">Kuhusu Sisi</a></li>
+                        <li><a href="#services">Huduma Zetu</a></li>
+                        <li><a href="#video">Video</a></li>
+                        <li><a href="#projects">Miradi Yetu</a></li>
+                        <li><a href="#office">Ofisi Yetu</a></li>
+                        <li><a href="#contact">Wasiliana Nasi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Huduma Zetu</h3>
+                    <ul>
+                        <li><a href="#services">Ujenzi wa Nyumba</a></li>
+                        <li><a href="#services">Ukarabati wa Nyumba</a></li>
+                        <li><a href="#services">Miundo ya Gypsum</a></li>
+                        <li><a href="#services">Mipango ya Umeme</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Mawasiliano</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Chanika, Dar es Salaam</li>
+                        <li><i class="fas fa-phone"></i> +255 786 463 020</li>
+                        <li><i class="fas fa-phone"></i> +255 754 616 660</li>
+                        <li><i class="fab fa-whatsapp"></i> +255 754 616 660</li>
+                        <li><i class="fas fa-envelope"></i> mulisa.construction@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Mulisa Construction & Designs. Haki zote zimehifadhiwa.</p>
+                <p>Developed by <span class="developer">MATO MEDIA TZ</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            if (mainNav.classList.contains('active')) {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // WhatsApp Form Submission
+        const whatsappForm = document.getElementById('whatsappForm');
+        
+        whatsappForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const location = document.getElementById('location').value;
+            const message = document.getElementById('message').value;
+            
+            // Validate phone number
+            const phoneRegex = /^0[67]\d{8}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Tafadhali ingiza namba ya simu sahihi (uanze na 07 au 06)');
+                return;
+            }
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Habari, ninavutiwa na huduma za Mulisa Construction.\n\n` +
+                                   `Jina: ${name}\n` +
+                                   `Simu: ${phone}\n` +
+                                   `Hudwa: ${service}\n` +
+                                   `Mahali: ${location}\n` +
+                                   `Ujumbe: ${message}\n\n` +
+                                   `Natangaza mchanganuo wa gharama.`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/255754616660?text=${encodedMessage}`;
+            
+            // Open WhatsApp in new tab
+            window.open(whatsappURL, '_blank');
+            
+            // Reset form
+            whatsappForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 90,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
